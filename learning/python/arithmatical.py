@@ -25,3 +25,8 @@ print(a is not b) # Non-identity
 print(a and b) # Logical AND
 print(a or b) # Logical OR
 print(not a) # Logical NOT
+print(sum(a, b)) # Sum of a and b
+print(min(a, b)) # Minimum of a and b
+print(max(a, b)) # Maximum of a and b
+print(pow(a, b)) # Power of a to the b
+print(abs(a)) # Absolute value of a

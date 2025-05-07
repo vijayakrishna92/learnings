@@ -6,3 +6,8 @@ z = 1j # complex
 print(type(x)) # <class 'int'>
 print(type(y)) # <class 'float'>
 print(type(z)) # <class 'complex'>
+
+x = round(1.5) # round to nearest integer
+print(x) # 2
+x = round(1.5, 1) # round to 1 decimal place
+print(x) # 1.5

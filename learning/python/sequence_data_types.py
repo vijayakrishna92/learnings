@@ -85,6 +85,9 @@ print(m) # [1, 3, 4, 5, 6, 7] modifying the copied list
 print(l) # [2, 3, 4, 5, 6, 7] original list remains unchanged
 print(sum([1, 2, 3])) # Sum of a list
 print(min([1, 2, 3])) # Minimum of a list
+print(max([1, 2, 3])) # Maximum of a list
+print(sorted([3, 2, 1])) # Sorted list
+print(sorted([3, 2, 1], reverse=True)) # Sorted list in descending order
 
 # tuple
 # tuple is an immutable sequence of elements enclosed in parentheses
@@ -109,4 +112,7 @@ print(t[::2]) # (1, 3) slicing the tuple from start to end with step 2
 print(t.count(1)) # 1 counting the number of occurrences of 1
 print(t.index(1)) # 0 finding the first occurrence of 1
 print(t.index(1, 1)) # 2 finding the first occurrence of 1 after index 1
+e = zip(t,t) # zipping the tuple
+print(list(e)) # [(1, 1), (2, 2), (3, 3), (4, 4), (5, 5)] zipping the tuple
+
 
