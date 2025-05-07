@@ -47,3 +47,10 @@ print(df)
 
 #save to new csv
 df.to_csv('data/output.csv', index= False)
+
+# json file reading
+df = pd.read_json('data/data.json')
+print(df)
+df.to_json('filename.json', orient='records')
+
+# sql
