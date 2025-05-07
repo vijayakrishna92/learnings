@@ -88,6 +88,8 @@ print(min([1, 2, 3])) # Minimum of a list
 print(max([1, 2, 3])) # Maximum of a list
 print(sorted([3, 2, 1])) # Sorted list
 print(sorted([3, 2, 1], reverse=True)) # Sorted list in descending order
+l = ['a', 'b', 'c'] # list of strings
+print(''.join(l)) # abc joining the list of strings
 
 # tuple
 # tuple is an immutable sequence of elements enclosed in parentheses

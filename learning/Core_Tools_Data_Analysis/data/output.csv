@@ -1,0 +1,11 @@
+Name,Age,income,active
+vijay,32.0,0.0,True
+aijay,33.0,10.0,True
+bijay,34.0,50.0,True
+vijay,35.0,30.0,True
+aijay,31.0,40.0,True
+bijay,37.0,,True
+vijay,38.0,60.0,True
+aijay,,40.0,True
+bijay,40.0,80.0,True
+vijay,43.0,90.0,True

@@ -26,3 +26,24 @@ print(df.value_counts()) # Print the value counts of the pandas dataframe
 print(df.nunique()) # Print the number of unique values in each column of the pandas dataframe
 print(df.iloc[:,-1]) # Print the last columns of the pandas dataframe
 print(df.iloc[0, -1]) # Print the element at row 0, column -1 of the pandas dataframe
+print(df.isnull().sum()) # Print the number of missing values in each column of the pandas dataframe
+print(df.fillna(0)) # Fill missing values with 0 in the pandas dataframe
+print(df.dropna()) # Drop rows with missing values in the pandas dataframe
+print(df.rename(columns={'Name': 'name'})) # Rename the column 'Name' to 'name' in the pandas dataframe
+print(df.replace({'Name': {'vijay': 'Jane'}})) # Replace the value 'vijay' with 'Jane' in the column 'Name' of the pandas dataframe
+print(df.drop_duplicates()) # Drop duplicate rows in the pandas dataframe
+#if missing values in the dataframe this below will not work
+print(df.astype({'Age': 'int'})) # Change the data type of the column 'Age' to int in the pandas dataframe
+
+# creating a new column
+df['active'] = [True, False, True, False, True, True, False, True, False, True]
+print(df)
+# change all values in the column 'active' to True
+df['active'] = True
+print(df)
+
+df['Name'] = df['Name'].apply(str.upper) # Convert the column 'Name' to uppercase
+print(df)
+
+#save to new csv
+df.to_csv('data/output.csv', index= False)
