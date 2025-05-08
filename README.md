@@ -5,6 +5,10 @@ DATA SCIENCE ROADMAP
 🟢 STAGE 1: Foundations
 Goal: Understand programming, math, and the data lifecycle.
 
+create python virtual environment
+python -m venv [any name]
+.\Scripts\activate
+
 🧑‍💻 Programming (Python)
 Variables, loops, conditionals, functions
 
@@ -40,9 +44,10 @@ Goal: Work with real data, clean it, explore it, and extract insights.
 🧰 Tools
 pandas, NumPy – data manipulation
 
-matplotlib, seaborn, plotly – visualization
+matplotlib, seaborn– visualization
 
 scikit-learn – ML starter
+nltk, opencv, rastero, Image, pytorch, tensorflow/keras
 
 SQL – querying structured data
 
