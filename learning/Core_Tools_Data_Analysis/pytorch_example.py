@@ -47,3 +47,21 @@ print(ar)
 lin = torch.linspace(0, 1, 5)  # create a tensor of linspace values with 5 values between 0 and 1
 # linspace is similar to numpy's linspace function
 print(lin)
+
+# arithmetic operations
+a = torch.tensor([[1, 2], [3, 4]])
+b = torch.tensor([[5, 6], [7, 8]])
+print(a+b)  # tensor addition
+print(a-b)  # tensor subtraction
+print(a*b)  # tensor multiplication
+print(a/b)  # tensor division
+print(a@b)  # tensor matrix multiplication
+print(a.matmul(b))  # tensor matrix multiplication using matmul function
+print(torch.matmul(a, b))  # tensor matrix multiplication using matmul function
+print(a.T)  # tensor transpose
+print(a.sum())  # tensor sum
+
+a = torch.tensor([[1., 2.], [3., 4.]])
+print(a.mean())  # tensor mean
+print(a.std())  # tensor standard deviation
+print(a.var())  # tensor variance
