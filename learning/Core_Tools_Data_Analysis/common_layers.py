@@ -36,6 +36,6 @@ if __name__ == "__main__":
     print(model)        # Print the model architecture
     
     # Example input: batch of 4 grayscale images of size 32x32
-    input_data = torch.randn(4, 1, 32, 32)  
+    input_data = torch.randn(4, 1, 32, 32)  # if 1000 images then 1000/4 times + remaining images at last will be the input(number of times it runs)
     output_data = model(input_data)  # Forward pass
     print(output_data.shape)  # Output shape should be (4, 2) for batch size of 4 and 2 classes
