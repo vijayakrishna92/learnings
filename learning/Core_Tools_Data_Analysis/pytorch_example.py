@@ -7,6 +7,8 @@
 # fundamentals of pytorch
 # tensor creation
 import torch
+import random
+import numpy as np
 
 t = torch.tensor([[1, 2], [3, 4]])
 print(t)
@@ -65,3 +67,58 @@ a = torch.tensor([[1., 2.], [3., 4.]])
 print(a.mean())  # tensor mean
 print(a.std())  # tensor standard deviation
 print(a.var())  # tensor variance
+print(a.min())  # tensor minimum value
+print(a.max())  # tensor maximum value
+print(a.argmin())  # tensor index of minimum value
+print(a.argmax())  # tensor index of maximum value
+print(a.nonzero())  # tensor nonzero values
+print(a==b)  # tensor equality
+print(a!=b)  # tensor inequality
+print(a>0)  # tensor greater than
+print(a<0)  # tensor less than
+print(a>=0)  # tensor greater than or equal to
+print(a<=0)  # tensor less than or equal to
+c = a.clone
+print(c)  # clone the tensor
+
+# Autograd and Computational Graph
+# Autograd is a powerful feature of PyTorch that allows for automatic differentiation of tensors.
+# It is used for computing gradients of tensors with respect to some scalar value (usually the loss function in a neural network).
+x = torch.tensor([[1., 2.,3., 4.]],requires_grad=True) # create a tensor with gradient tracking enabled
+# this is useful for training neural networks and computing gradients
+# for backpropagation
+print(x.requires_grad) # print the tensor
+y= x+2 # compute the square of the tensor
+z = y.sum() # compute the sum of the tensor
+z.backward()
+# compute the gradients of y with respect to x
+print(x.grad) # print the gradients of y with respect to x
+
+# Using CUDA and Moving Tensors to GPU
+# CUDA is a parallel computing platform and application programming interface (API) model created by NVIDIA.
+# It allows developers to use a CUDA-enabled graphics processing unit (GPU) for general purpose processing – an approach known as GPGPU (General-Purpose computing on Graphics Processing Units).   
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {device}")  # Check if GPU is available and set the device accordingly
+x = torch.tensor([1.0, 2.0, 3.0], device=device)  # Create a tensor on the selected device
+print(x)  # Print the tensor
+print(x.device)  # Print the device of the tensor
+# Model on GPU
+#model = MyModel().to(device)
+
+# Setting Random Seeds for Reproducibility
+# Setting random seeds is important for reproducibility in experiments.
+# It ensures that the random numbers generated are the same every time the code is run.
+# This is especially important in deep learning, where random initialization of weights can lead to different results.
+# Setting the seed for PyTorch
+def set_seed(seed):
+    """Set the seed for random number generation for reproducibility."""
+    torch.manual_seed(seed)  # Set the seed for PyTorch
+    np.random.seed(seed)  # Set the seed for NumPy
+    random.seed(seed)  # Set the seed for Python's random module
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)  # Set the seed for all GPUs
+    torch.backends.cudnn.deterministic = True  # Ensure deterministic behavior
+    torch.backends.cudnn.benchmark = False  # Disable the benchmark for reproducibility
+    torch.backends.cudnn.enabled = False  # Disable cuDNN for reproducibility
+
+seed = 42
