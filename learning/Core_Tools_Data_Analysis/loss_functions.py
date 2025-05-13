@@ -79,6 +79,7 @@ class SimpleNN(nn.Module):
 model = SimpleNN()
 output = model(torch.randn(4, 1, 32, 32))
 print(output.shape)  # Output shape should be (4, 2) for batch size of 4 and 2 classes
+
 # loss functions
 # 1. Mean Squared Error (MSE) Loss
 mse_loss = nn.MSELoss()
