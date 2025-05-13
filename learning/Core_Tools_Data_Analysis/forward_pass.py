@@ -24,4 +24,3 @@ class SimpleNN(nn.Module):
 
 model = SimpleNN()
 output = model(torch.randn(4, 1, 32, 32)) # forward pass is where the model makes predictions
-
