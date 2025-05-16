@@ -7,6 +7,11 @@ print(tensors)
 print(tensors.shape)
 print(tensors.dtype)
 
+# variable can be modified while training. It stores and updates parameters during training, like weights and biases in neural networks.
+b = tf.Variable([1, 2, 3])
+b.assign_add([1, 1, 1])  # In-place addition
+print("Variable b after adding 1s:", b)
+
 size = tf.size(tensors) # Get the size of the tensor
 print(size) # Get the size of the tensor
 
@@ -30,3 +35,12 @@ tensors = tf.constant([1,2,3,4,5,6])
 fav = tf.gather(tensors, indices=[1,2,3,4])
 print(fav)
 print(fav.numpy())
+
+
+tensor = tf.constant([[1, 2, 3], [4, 5, 6]])
+
+# Indexing
+print("First row:", tensor[0])
+
+# Slicing
+print("Second column:", tensor[:, 1])

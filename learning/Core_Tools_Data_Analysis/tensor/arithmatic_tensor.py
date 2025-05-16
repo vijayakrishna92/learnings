@@ -28,3 +28,8 @@ two = tf.constant([[1,2,3],[4,5,6]])
 
 mul = tf.multiply(one, two)
 print(mul)
+
+one = tf.constant([[1,2,3],[4,5,6]])
+
+sums = tf.reduce_sum(one)
+print(sums)
