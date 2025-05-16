@@ -6,3 +6,6 @@ labels = tf.constant([0,1,1,0])
 dataset = tf.data.Dataset.from_tensor_slices((features,labels))
 for i,j in dataset:
   print(i.numpy(),j.numpy())
+
+  '''Breaks big tensors into individual (x, y) pairs
+Needed to feed data sample-by-sample into the model.'''
