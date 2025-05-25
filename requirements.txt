@@ -6,3 +6,4 @@ seaborn==0.13.2
 torch==2.7.0
 PyPDF2==3.0.1
 tensorflow==2.19.0
+opencv-python==
