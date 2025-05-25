@@ -1,4 +1,4 @@
-import rasterio
+import rasterio # Georeferenced raster (GeoTIFF)
 #https://people.math.sc.edu/Burkardt/data/tif/tif.html
 # Open raster file
 with rasterio.open('images/3.tif') as src:
