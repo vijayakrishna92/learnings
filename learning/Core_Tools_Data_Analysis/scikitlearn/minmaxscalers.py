@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
-#Used to standardize features (mean = 0, std = 1).
+# Alternative to StandardScaler, scales between 0 and 1.
 df = pd.read_csv('data/data.csv')
 
 scaler = MinMaxScaler()
