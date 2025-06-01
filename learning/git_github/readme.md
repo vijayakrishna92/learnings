@@ -390,8 +390,6 @@ git config --global core.autocrlf true
 | 34   | **Doskey Push Example**   | `doskey gpo=git push origin $*`                  | Shortcut for push                       |
 | 35   | **Doskey Pull Example**   | `doskey gpl=git pull origin $*`                  | Shortcut for pull                       |
 | 36   | **Prune Deleted Remotes** | `git fetch --prune`                              | Remove deleted remote branches          |
-| 🔢 # | 🧰 Command/Category                     | 💻 Command Syntax or Example                                         | 📝 Description                                               |
-| ---- | --------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------ |
 | 37   | **Amend Commit**                        | `git commit --amend`                                                 | Modify the last commit message or content                    |
 | 38   | **Squash Commits (Interactive Rebase)** | `git rebase -i HEAD~3`                                               | Combine multiple commits into one                            |
 | 39   | **Blame**                               | `git blame <file>`                                                   | Show who made each line change in a file                     |
