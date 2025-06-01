@@ -9,3 +9,4 @@ tensorflow==2.19.0
 opencv-python==4.11.0.86
 rasterio==1.4.3
 pillow==11.2.1
+scikit-learn==1.6.1
