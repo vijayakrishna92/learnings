@@ -128,3 +128,6 @@ Docker & Kubernetes (optional)
 CI/CD for ML
 
 MLflow or Weights & Biases (tracking)
+
+
+pip show scikit-learn 
