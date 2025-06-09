@@ -11,8 +11,6 @@ Missing indicator variables
 2. Handling Outliers
 Z-score, IQR methods
 
-Visualization (boxplots, scatter)
-
 Capping/trimming/winsorization
 
 3. Data Types & Conversions
